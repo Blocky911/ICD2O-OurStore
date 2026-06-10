@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>NovaStitch // Wear The Roar Luxury Streetwear</title>
     <link rel="stylesheet" href="style.css">
+=======
+    <title>STUDIO | Designer Wear</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+>>>>>>> be5e1b6399b64ef21e8bea0fa2958a5324e537bc
 </head>
 <body>
 
@@ -21,6 +27,7 @@
                 <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
                 <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
             </ul>
+<<<<<<< HEAD
             <div class="nav-actions">
                 <div class="search-bar-container">
                     <input type="text" class="global-search-input" placeholder="Search tech catalog...">
@@ -30,6 +37,13 @@
                 <a href="dashboard.html" class="icon-btn">★ <span class="badge wish-count-badge">0</span></a>
                 <a href="checkout.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
             </div>
+=======
+        </nav>
+        <div class="nav-utilities">
+            <button class="theme-toggle-btn" id="theme-toggle">🌓 Mode</button>
+            <a href="signin.html" class="signin-link" id="user-nav-link">Sign In</a>
+            <div class="cart-icon" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</div>
+>>>>>>> be5e1b6399b64ef21e8bea0fa2958a5324e537bc
         </div>
     </header>
 
@@ -59,6 +73,21 @@
         <div class="products-grid" id="featured-products-grid">
             </div>
     </section>
+
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="cart-total-val">0.00</span></div>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout simulation!')">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
 
     <footer>
         <div class="container footer-grid">
