@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STUDIO | Designer Wear</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <header class="navbar">
@@ -18,8 +19,8 @@
         </nav>
         <div class="nav-utilities">
             <button class="theme-toggle-btn" id="theme-toggle">🌓 Mode</button>
-            <a href="signin.html" class="signin-link">Sign In</a>
-            <div class="cart-icon">Cart (<span id="cart-count">0</span>)</div>
+            <a href="signin.html" class="signin-link" id="user-nav-link">Sign In</a>
+            <div class="cart-icon" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</div>
         </div>
     </header>
 
@@ -30,6 +31,21 @@
         </section>
         <section class="product-grid" id="product-grid"></section>
     </main>
+
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: $<span id="cart-total-val">0.00</span></div>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout simulation!')">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
 
     <footer>
         <p>&copy; 2026 STUDIO Designer Wear. All rights reserved.</p>
