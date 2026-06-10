@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Authorization Portal // NovaStitch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand">
+                <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
+                NOVASTITCH
+            </a>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-tabs">
+            <div class="auth-tab active">SIGN IN</div>
+            <div class="auth-tab">REGISTER ACCOUNT</div>
+        </div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="auth-email">NETWORK IDENTITY EMAIL</label>
+                <input type="email" id="auth-email" class="form-control" required placeholder="operative@novastitch.com">
+            </div>
+            <div class="form-group">
+                <label for="auth-pass">PASS-STRING CODE</label>
+                <input type="password" id="auth-pass" class="form-control" required placeholder="••••••••••••••">
+            </div>
+            <button type="submit" class="btn btn-accent" style="width:100%; margin-top:1rem;">REQUEST CLEARANCE TOKEN</button>
+        </form>
+
+        <div style="text-align:center; margin:2rem 0; color:var(--border-color); position:relative;">
+            <hr style="border-color:currentColor;">
+            <span style="position:absolute; top:-10px; background:var(--bg-secondary); padding:0 1rem; left:50%; transform:translateX(-50%); color:var(--text-muted); font-size:0.8rem;">SECURE FEDERATED PROVIDERS</span>
+        </div>
+
+        <button id="google-oauth-trigger" class="google-btn">
+            <svg style="width:18px;height:18px;" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v3.92h6.61c-.3 1.55-1.17 2.86-2.5 3.74l3.88 3.01c2.26-2.09 3.75-5.18 3.75-8.6z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.01c-1.08.72-2.45 1.16-4.05 1.16-3.11 0-5.74-2.11-6.68-4.96L1.31 17.37C3.26 21.3 7.31 24 12 24z"/><path fill="#FBBC05" d="M5.32 14.28c-.24-.72-.38-1.49-.38-2.28s.14-1.56.38-2.28L1.31 6.69C.48 8.36 0 10.13 0 12s.48 3.64 1.31 5.31l4.01-3.03z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.31 6.63l4.01 3.04c.94-2.85 3.57-4.92 6.68-4.92z"/></svg>
+            Sign in with Google Secure Sync
+        </button>
+    </main>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

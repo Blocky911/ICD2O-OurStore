@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Directory // NovaStitch Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="brand">
+                <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
+                NOVASTITCH
+            </a>
+            <ul class="nav-menu">
+                <li><a href="shop.html" class="nav-link active">Shop All</a></li>
+                <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
+                <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="icon-btn">🌗</button>
+                <a href="auth.html" class="icon-btn">👤</a>
+                <a href="dashboard.html" class="icon-btn">★ <span class="badge wish-count-badge">0</span></a>
+                <a href="checkout.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container shop-container">
+        <aside class="filters-panel">
+            <div class="filter-group">
+                <h4>SEARCH DIRECTORY</h4>
+                <input type="text" id="shop-page-search-input" class="form-control" placeholder="Filter current page view...">
+            </div>
+            
+            <div class="filter-group">
+                <h4>GARMENT SPECIFICATION</h4>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="hoodies"> Hoodies</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="t-shirts"> T-Shirts</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="cargo pants"> Cargo Pants</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="bags"> Bags</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="hats"> Hats</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="denim jackets"> Denim Jackets</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="socks"> Socks</label>
+                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="sneakers"> Sneakers</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>GENDER DIVISION</h4>
+                <label class="filter-option"><input type="checkbox" class="filter-gender-chk" value="men"> Men Division</label>
+                <label class="filter-option"><input type="checkbox" class="filter-gender-chk" value="women"> Women Division</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>PRICE CALIBRATION</h4>
+                <select id="price-sort-select" class="form-control">
+                    <option value="default">Default Array Order</option>
+                    <option value="low-high">Price: Scaled Low to High</option>
+                    <option value="high-low">Price: Scaled High to Low</option>
+                </select>
+            </div>
+        </aside>
+
+        <main>
+            <div class="products-grid" id="shop-main-products-grid">
+                </div>
+        </main>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
