@@ -1,4 +1,4 @@
-// Product Data Array
+// Product Dataset
 const products = [
     { id: 1, name: "Oversized Graphic Hoodie", price: 85.00 },
     { id: 2, name: "Minimalist Logo T-Shirt", price: 40.00 },
@@ -12,18 +12,26 @@ const products = [
 
 let cartCount = 0;
 
-// Function to render products to the page
+// Instantiate the Add-To-Cart UI Click sound (using an online lightweight synth beep as fallback)
+const cartSound = new Audio("https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav");
+
+// Load page layout
+document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+    initThemeControl();
+    initAuthSimulation();
+});
+
+// Build items on interface
 function renderProducts() {
     const grid = document.getElementById('product-grid');
+    if (!grid) return;
     
     products.forEach(product => {
-        // Create card container
         const card = document.createElement('div');
         card.className = 'product-card';
-        
-        // Populate card HTML
         card.innerHTML = `
-            <div class="product-image">[ Product Image Here ]</div>
+            <div class="product-image">[ Image Pending ]</div>
             <div class="product-info">
                 <div>
                     <h3 class="product-title">${product.name}</h3>
@@ -32,18 +40,47 @@ function renderProducts() {
                 <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
             </div>
         `;
-        
         grid.appendChild(card);
     });
 }
 
-// Function to handle adding items to the cart
+// Increment Count & Fire Sound effect
 function addToCart() {
     cartCount++;
-    document.getElementById('cart-count').innerText = cartCount;
+    const countSpan = document.getElementById('cart-count');
+    if (countSpan) countSpan.innerText = cartCount;
     
-    // Optional: Add a small visual feedback animation here later
+    // Play the audio cue cleanly even if tapped fast
+    cartSound.currentTime = 0;
+    cartSound.play().catch(err => console.log("Audio playback delayed until user interacting."));
 }
 
-// Initialize the store when the page loads
-window.onload = renderProducts;
+// Theme Switcher Setup (Saves Preference via LocalStorage)
+function initThemeControl() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (!toggleBtn) return;
+    
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    
+    toggleBtn.addEventListener('click', () => {
+        let targetTheme = 'dark';
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            targetTheme = 'light';
+        }
+        document.documentElement.setAttribute('data-theme', targetTheme);
+        localStorage.setItem('theme', targetTheme);
+    });
+}
+
+// Sign-In Form simulation link 
+function initAuthSimulation() {
+    const signInForm = document.getElementById('signin-form');
+    if (signInForm) {
+        signInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert(`Welcome back! Returning to shop.`);
+            window.location.href = "index.html";
+        });
+    }
+}
