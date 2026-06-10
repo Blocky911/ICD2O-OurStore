@@ -16,7 +16,7 @@ const PRODUCTS = [
         stock: 4,
         description: "Heavyweight 450GSM organic brushed cotton loopback fleece. Boxy relaxed athletic modular silhouette featuring the signature cybernetic digital NovaStitch laser-etched orange roaring tiger emblem front-center.",
         features: ["Heavyweight 450GSM Organic Cotton", "Laser-etched logo detailing", "Pre-shrunk vintage wash treatment"],
-        graphicType: "hoodie"
+        image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "hd-02",
@@ -29,7 +29,7 @@ const PRODUCTS = [
         stock: 12,
         description: "Deconstructed raw raw-edge waistband design cropped aesthetic. Features technical high-density rubberized graphic treatments along structural sleeve panel stitch seams.",
         features: ["Exaggerated elongated sleeves", "High-density embossed chest print", "Ribbed knit secure cuffs"],
-        graphicType: "hoodie"
+        image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "hd-03",
@@ -42,7 +42,7 @@ const PRODUCTS = [
         stock: 8,
         description: "Acid-washed custom-dyed premium thermal streetwear outer layer with high-impact back puff print detailing celebrating classic athletic sportswear silhouettes.",
         features: ["Vintage ozone pigment wash", "Kangaroo internal secret phone pocket", "Double-lined protective hood"],
-        graphicType: "hoodie"
+        image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "hd-04",
@@ -55,7 +55,7 @@ const PRODUCTS = [
         stock: 3,
         description: "High-fashion crossover modular funnel hood construction built for techwear aesthetic layering configurations during colder microclimates.",
         features: ["Crossover magnetic high collar", "Water-resistant performance jersey fleece", "Invisible side zippered pockets"],
-        graphicType: "hoodie"
+        image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "hd-05",
@@ -68,7 +68,7 @@ const PRODUCTS = [
         stock: 15,
         description: "Bold triple tone color-blocked configuration paying stylistic homage to German and American 90s archive running club wear.",
         features: ["Relaxed drop-shoulder comfort build", "Premium chenille embroidered tiger patch", "Interlocking safety stitch seams"],
-        graphicType: "hoodie"
+        image: "https://images.unsplash.com/photo-1609873814058-a8928924184a?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- T-SHIRTS ---
@@ -83,7 +83,7 @@ const PRODUCTS = [
         stock: 22,
         description: "Premium interlocking long-staple luxury combed cotton fabrication featuring vector schematic typography layout on back.",
         features: ["280GSM Luxury Combed Cotton", "High-fidelity silk screen print", "Thick structural mock neck collar line"],
-        graphicType: "shirt"
+        image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ts-02",
@@ -96,7 +96,7 @@ const PRODUCTS = [
         stock: 19,
         description: "Ultra soft, breathable daily driver basic layout featuring signature micro tiger crest typography branding hit left chest.",
         features: ["Lightweight slub cotton matrix texture", "Dropped seamless shoulders", "Eco-friendly non-toxic liquid dye processing"],
-        graphicType: "shirt"
+        image: "https://images.unsplash.com/photo-1554568218-0f1715e72254?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ts-03",
@@ -109,7 +109,7 @@ const PRODUCTS = [
         stock: 5,
         description: "Distressed edge detailing vintage oil-wash streetwear tee with screenprinted expanding multi-layered optical illusion typography artwork.",
         features: ["Hand-distressed neck collar and hemline", "Discharge ink breathable printing process", "Custom collection serialization numbering"],
-        graphicType: "shirt"
+        image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ts-04",
@@ -122,7 +122,7 @@ const PRODUCTS = [
         stock: 14,
         description: "Form-fitting, flexible rib-knit dynamic modern streetwear styling essential, accented with miniature glowing tiger logo stamp.",
         features: ["Highly elastic premium blend construction", "Contrast flatlock accent stitching lines", "Moisture wicking cool dry performance"],
-        graphicType: "shirt"
+        image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ts-05",
@@ -135,7 +135,7 @@ const PRODUCTS = [
         stock: 30,
         description: "Square aesthetic wide build silhouette with monochromatic luxury high-density silicone transfer graphic detailing.",
         features: ["Heavy tight-weave interlocked jersey", "Silicone rubber non-fading center patch", "Enzyme washed for maximum skin comfort"],
-        graphicType: "shirt"
+        image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- CARGO PANTS ---
@@ -150,7 +150,7 @@ const PRODUCTS = [
         stock: 6,
         description: "Military-grade ripstop tactical trousers featuring articulated ergonomic multi-panel knee reinforcement systems and modular storage pockets.",
         features: ["Waterproofing DWR surface coating", "8-pocket dual utility geometric configuration", "Ankle bungee cord width regulators"],
-        graphicType: "pants"
+        image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "cg-02",
@@ -163,7 +163,7 @@ const PRODUCTS = [
         stock: 7,
         description: "Exaggerated high-volume ultra-lightweight techwear utility balloon trousers featuring signature contrasting tiger-orange nylon hanging security straps.",
         features: ["Ultra-wide volume balloon draping", "Adjustable integrated woven belt loop system", "Breathable tech-nylon construction material"],
-        graphicType: "pants"
+        image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "cg-03",
@@ -176,7 +176,7 @@ const PRODUCTS = [
         stock: 11,
         description: "Heavy rugged duck canvas structural skate/workwear trousers with expandable reinforced bellows utility side cargo spacing pockets.",
         features: ["14oz Heavy Duty Duck Cotton Canvas", "Triple-needle structural main seam construction", "Reinforced back hammer loop utility belt"],
-        graphicType: "pants"
+        image: "https://images.unsplash.com/photo-1517423738875-5ce310acd3da?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "cg-04",
@@ -189,7 +189,7 @@ const PRODUCTS = [
         stock: 9,
         description: "A hybrid fusion of tailored eveningwear and structural utilitarian streetwear, featuring dynamic lower-leg zipper venting options.",
         features: ["Premium stretch gabardine weave composition", "Hidden invisible zip side security pockets", "Ankle vent premium YKK luxury zippers"],
-        graphicType: "pants"
+        image: "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "cg-05",
@@ -202,7 +202,7 @@ const PRODUCTS = [
         stock: 2,
         description: "Comfort-focused premium flexible stretch-twill multi-purpose streetwear utility joggers with secure zippered cargo bays.",
         features: ["Elasticized comfort waist layout with pull drawcords", "Slim-tapered structural fit lines", "Embroidered tonal branding micro badges"],
-        graphicType: "pants"
+        image: "https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- BAGS ---
@@ -217,7 +217,7 @@ const PRODUCTS = [
         stock: 4,
         description: "Indestructible 1000D ballistic Cordura laptop carrier modular transport chassis with customized multi-point laser MOLLE mounting webs.",
         features: ["1000D Genuine Ballistic Cordura Shell", "Fleece-lined suspended 16-inch laptop pocket", "Fidlock German magnetic V-buckle closure"],
-        graphicType: "bag"
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "bg-02",
@@ -230,7 +230,7 @@ const PRODUCTS = [
         stock: 18,
         description: "Crossbody fast-access urban exploration courier kit featuring seam-sealed vinyl lining interiors for full weather protection.",
         features: ["Fully waterproof TPU-laminated exterior", "Quick-release quick thumb adjust stabilizer strap", "Dual tactical outer D-Ring anchors"],
-        graphicType: "bag"
+        image: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "bg-03",
@@ -243,7 +243,7 @@ const PRODUCTS = [
         stock: 6,
         description: "Iconic high-fashion technical utility chest mount loadouts inspired by modern subculture military runway trends.",
         features: ["Breathable air-mesh back ventilation frame", "Dual independent zipper core structural modules", "Reflective safety high-visibility branding hits"],
-        graphicType: "bag"
+        image: "https://images.unsplash.com/photo-1601333144130-8cbb312386b6?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "bg-04",
@@ -256,7 +256,7 @@ const PRODUCTS = [
         stock: 8,
         description: "Oversized down-filled insulated buffer nylon tote configuration showcasing the iconic repeating embroidered tiger insignia array patterns.",
         features: ["Padded structural shoulder carry straps", "Inner secure zippered valuables security pocket", "Magnetic main opening quick-seal snaps"],
-        graphicType: "bag"
+        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "bg-05",
@@ -269,7 +269,7 @@ const PRODUCTS = [
         stock: 3,
         description: "High-capacity convertible weekender travel duffle architecture that quickly transforms into fully functional shoulder backpack rigs.",
         features: ["Heavy wax treated water-repellent canvas", "Dedicated isolated ventilated shoe clean compartment", "Heavy-gauge reinforced industrial metal hardware"],
-        graphicType: "bag"
+        image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- HATS ---
@@ -284,7 +284,7 @@ const PRODUCTS = [
         stock: 40,
         description: "Low-profile unstructured vintage cotton twill curve-brim headwear complete with hand-frayed details and internal moisture headbands.",
         features: ["100% Premium Washed Cotton Twill Base", "Aged brass slider adjustment backstrap", "High density luxury 3D embroidered logo artwork"],
-        graphicType: "hat"
+        image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ht-02",
@@ -297,7 +297,7 @@ const PRODUCTS = [
         stock: 25,
         description: "Four-seam construction thick tight-ribbed fisherman styling beanie configuration deploying premium insulation technologies.",
         features: ["Thermal-regulating advanced acrylic blend", "Wide fold-over protective perimeter cuff design", "Woven double-sided identity exterior tag label"],
-        graphicType: "hat"
+        image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ht-03",
@@ -310,7 +310,7 @@ const PRODUCTS = [
         stock: 12,
         description: "Wide-brim tactical sun protection hat built from ultralight dynamic stretch water-shedding performance nylon weaves.",
         features: ["Laser-cut side ventilation cooling eyelets", "Removable toggle-lock chin cord string safety", "Internal quick-wicking sweatband liner loop"],
-        graphicType: "hat"
+        image: "https://images.unsplash.com/photo-1575425186775-b8de9fa427e6?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ht-04",
@@ -323,7 +323,7 @@ const PRODUCTS = [
         stock: 19,
         description: "Flat-brim square structure camp aesthetic profile modeled after European and East Coast bicycle messenger setups.",
         features: ["Flexible weight-saving soft brim memory core", "Quick-snap webbing clip rear fastener strap", "Subtle side-panel dual breathing screens"],
-        graphicType: "hat"
+        image: "https://images.unsplash.com/photo-1534215754734-18e55d13ce3a?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ht-05",
@@ -336,7 +336,7 @@ const PRODUCTS = [
         stock: 8,
         description: "High-crown stiff front panel wool athletic classic snapback profile presenting the premium roaring tiger graphic badge proudly.",
         features: ["Premium structural wool-blend buckram crown", "Contrasting undersurface grey brim retro finish", "Adjustable secure standard snap fit closure grid"],
-        graphicType: "hat"
+        image: "https://images.unsplash.com/photo-1611938264359-a197e24c7482?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- DENIM JACKETS ---
@@ -351,7 +351,7 @@ const PRODUCTS = [
         stock: 3,
         description: "Raw Japanese selvedge denim vintage Type-III structure featuring custom customized heavy-duty tiger branded metal donut buttons.",
         features: ["14.5oz Raw Indigo Japanese Selvedge Denim", "Intricate tiger-stripe interior custom yoke stitch", "Dual side hidden structural welt slit pockets"],
-        graphicType: "jacket"
+        image: "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "dn-02",
@@ -364,7 +364,7 @@ const PRODUCTS = [
         stock: 5,
         description: "Bleach-washed light indigo modern streetwear drape jacket with massive detailed tiger face line-art laser engraving across the entire back panel.",
         features: ["Exaggerated drop-shoulder boyfriend silhouette", "Heavy localized distressing and frayed hems", "Premium laser etching non-fading art design"],
-        graphicType: "jacket"
+        image: "https://images.unsplash.com/photo-1611312449412-6cefac5dc3e4?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "dn-03",
@@ -377,7 +377,7 @@ const PRODUCTS = [
         stock: 7,
         description: "Wax-treated matte black industrial style denim jacket framework built with unique zippered expandable side seam vents.",
         features: ["Water-resistant protective matte wax coating finish", "Heavy gauge asymmetric gunmetal front zipper lock", "Ribbed moto accordion sleeve movement joints"],
-        graphicType: "jacket"
+        image: "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "dn-04",
@@ -390,7 +390,7 @@ const PRODUCTS = [
         stock: 4,
         description: "Avant-garde combination of raw indigo denim fragments interlaced with heavyweight black French loopback cotton terry panels.",
         features: ["Intricate split-media body construction", "Adjustable waist button button strap hardware stabilizers", "Raw unfinished edge border stitching layout design"],
-        graphicType: "jacket"
+        image: "https://images.unsplash.com/photo-1495105787522-5334e3ffa0ef?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "dn-05",
@@ -403,7 +403,7 @@ const PRODUCTS = [
         stock: 10,
         description: "Warm cold-weather streetwear staple fully lined with plush faux-sherpa insulation, featuring premium heavy vintage stone wash character.",
         features: ["High-pile insulating interior core sherpa layer", "Sleeve insulation satin quilted lining tracks", "Heavy-duty double button flap chest storage units"],
-        graphicType: "jacket"
+        image: "https://images.unsplash.com/photo-1616243415577-df25a31f78ae?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- SOCKS ---
@@ -418,7 +418,7 @@ const PRODUCTS = [
         stock: 50,
         description: "High-cushion athletic streetwear socks with reinforced arch compression bands and high-density jacquard knit tiger icons.",
         features: ["80% Premium Combed Long-Staple Cotton Base", "Terry loop thick impact zone under-foot cushioning", "Stay-up elastic ribbed performance leg compression"],
-        graphicType: "socks"
+        image: "https://images.unsplash.com/photo-1582966772680-860e372bb558?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sk-02",
@@ -431,7 +431,7 @@ const PRODUCTS = [
         stock: 35,
         description: "Lower profile ventilation activewear socks presenting glowing high-visibility tiger orange accents and heel guards.",
         features: ["CoolMesh top-of-foot custom heat venting tracks", "Seamless toe closure links preventing blistering", "Reflective safety collar rear loop pull tabs"],
-        graphicType: "socks"
+        image: "https://images.unsplash.com/photo-1603251579431-8041402bdeda?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sk-03",
@@ -444,7 +444,7 @@ const PRODUCTS = [
         stock: 42,
         description: "Individually hand-dipped custom pastel pattern streetwear sock base making every single set completely unique.",
         features: ["Hand-processed unique custom dip dye coloration", "Silky soft modal structural microfiber enhanced core", "Reinforced heel capsule shielding structures"],
-        graphicType: "socks"
+        image: "https://images.unsplash.com/photo-1584286594289-42b783cb0f74?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sk-04",
@@ -457,7 +457,7 @@ const PRODUCTS = [
         stock: 15,
         description: "Ultra-luxurious premium loungewear streetwear crossover sock option knit carefully out of fine Mongolian cashmere yarns.",
         features: ["30% Real Mongolian Cashmere natural fibers", "Non-binding loose-fit comfort ribbing perimeter", "Micro suede non-slip bottom graphic typography footprints"],
-        graphicType: "socks"
+        image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sk-05",
@@ -470,7 +470,7 @@ const PRODUCTS = [
         stock: 28,
         description: "Old-school skating subculture inspired high rise knee socks sporting classic vintage sports stripe configurations.",
         features: ["Durable elastic-core cotton composite build", "Extra long length versatile scrunched layout styling", "Embroidered high relief luxury branding crests"],
-        graphicType: "socks"
+        image: "https://images.unsplash.com/photo-1561052967-61fc91e48d79?w=800&auto=format&fit=crop&q=80"
     },
 
     // --- SNEAKERS ---
@@ -485,7 +485,7 @@ const PRODUCTS = [
         stock: 2,
         description: "Inspired by high-fashion runway chunky sneakers and technical performance trail shoes. Deploys advanced EVA foam platform shock absorption cells.",
         features: ["Italian full grain calfskin leather panels", "Futuristic sculpted custom dual density EVA midsole", "Speed-lacing quick cable toggle fastener routing"],
-        graphicType: "sneaker"
+        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sn-02",
@@ -498,7 +498,7 @@ const PRODUCTS = [
         stock: 6,
         description: "One-piece digital breathable master-knit upper chassis that maps seamlessly to the dynamic anatomical contours of your foot.",
         features: ["Engineered highly elastic breathable master-knit shell", "Ultralight non-slip carbon rubber outsole plate", "Responsive energy returning step capsule cells"],
-        graphicType: "sneaker"
+        image: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sn-03",
@@ -511,7 +511,7 @@ const PRODUCTS = [
         stock: 14,
         description: "Rugged durable heavyweight canvas traditional flat sole skateboard sneaker frame showing heavy wrap-around side bumper graphics.",
         features: ["16oz ballistic canvas weave structural sidewalls", "Double-vulcanized protective rubber sidewall tapes", "High-grip industrial custom waffle tread layout"],
-        graphicType: "sneaker"
+        image: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sn-04",
@@ -524,7 +524,7 @@ const PRODUCTS = [
         stock: 3,
         description: "Premium retro basketball aesthetics re-imagined with ultra clean monochrome architectural profiles and luxury metallic gold tiger lace dubraes.",
         features: ["Pebbled drum-dyed luxury leather construction", "Perforated breathability micro array toe box zones", "Metallic luxury gold-plated steel accent hardware closures"],
-        graphicType: "sneaker"
+        image: "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "sn-05",
@@ -537,7 +537,7 @@ const PRODUCTS = [
         stock: 8,
         description: "A hybrid neoprene sock slip-on sneaker variant utilizing outer hard exoskeleton cages and tactical quick adjustment straps.",
         features: ["Flexible moisture-resistant neoprene inner booties", "Indestructible hard polymer composite outer clip exoskeletons", "Quick release high load-bearing side buckle pins"],
-        graphicType: "sneaker"
+        image: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=800&auto=format&fit=crop&q=80"
     }
 ];
 

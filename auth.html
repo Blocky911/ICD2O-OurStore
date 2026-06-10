@@ -18,11 +18,20 @@
 
     <main class="auth-container">
         <div class="auth-tabs">
-            <div class="auth-tab active">SIGN IN</div>
-            <div class="auth-tab">REGISTER ACCOUNT</div>
+            <div id="auth-signin-tab" class="auth-tab active">SIGN IN</div>
+            <div id="auth-register-tab" class="auth-tab">REGISTER ACCOUNT</div>
         </div>
 
-        <form id="login-form">
+        <div id="auth-message" style="color:var(--accent); margin-bottom:1.5rem; min-height:1.2rem;"></div>
+
+        <form id="auth-form" data-mode="login">
+            <h1 id="auth-form-title" style="font-family:var(--font-display); margin-bottom:1.5rem;">Sign In</h1>
+
+            <div class="form-group" id="auth-name-row" style="display:none;">
+                <label for="auth-name">FULL OPERATIVE IDENTIFIER</label>
+                <input type="text" id="auth-name" class="form-control" placeholder="First Last">
+            </div>
+
             <div class="form-group">
                 <label for="auth-email">NETWORK IDENTITY EMAIL</label>
                 <input type="email" id="auth-email" class="form-control" required placeholder="operative@novastitch.com">
@@ -31,7 +40,13 @@
                 <label for="auth-pass">PASS-STRING CODE</label>
                 <input type="password" id="auth-pass" class="form-control" required placeholder="••••••••••••••">
             </div>
-            <button type="submit" class="btn btn-accent" style="width:100%; margin-top:1rem;">REQUEST CLEARANCE TOKEN</button>
+
+            <div class="form-group" id="auth-confirm-row" style="display:none;">
+                <label for="auth-confirm">CONFIRM PASS-STRING</label>
+                <input type="password" id="auth-confirm" class="form-control" placeholder="••••••••••••••">
+            </div>
+
+            <button type="submit" id="auth-submit-btn" class="btn btn-accent" style="width:100%; margin-top:1rem;">REQUEST CLEARANCE TOKEN</button>
         </form>
 
         <div style="text-align:center; margin:2rem 0; color:var(--border-color); position:relative;">
