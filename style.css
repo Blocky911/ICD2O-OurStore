@@ -1,5 +1,6 @@
 /* =========================================================
-   FruitStitch Premium Bright Streetwear Design System
+   FruitStitch Full CSS
+   Bright Premium Streetwear Theme
    ========================================================= */
 
 :root {
@@ -46,6 +47,8 @@
     --border-bright: rgba(255, 42, 109, 0.35);
 }
 
+/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -80,15 +83,17 @@ textarea {
     font-family: inherit;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 .container {
     width: min(1180px, calc(100% - 2rem));
     margin: 0 auto;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
+/* Header */
 
 header {
     position: sticky;
@@ -114,12 +119,24 @@ header {
 .brand {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    font-family: var(--font-display);
-    font-size: 1.35rem;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.site-logo {
+    height: 58px;
+    width: auto;
+    max-width: 90px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 14px rgba(255, 42, 109, 0.55));
+}
+
+.brand-text {
+    font-size: 1.55rem;
     font-weight: 900;
     letter-spacing: 2px;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-warning), var(--accent-secondary));
+    background: linear-gradient(135deg, #ff2a6d, #ffb000, #00e5ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -128,7 +145,6 @@ header {
     width: 34px;
     height: 34px;
     fill: var(--accent-primary);
-    filter: drop-shadow(0 0 12px rgba(255, 42, 109, 0.6));
 }
 
 .nav-menu {
@@ -174,9 +190,12 @@ header {
     gap: 0.7rem;
 }
 
+/* Inputs */
+
 .global-search-input,
 .form-control,
-.form-input {
+.form-input,
+textarea {
     width: 100%;
     background: rgba(255, 255, 255, 0.06);
     color: var(--text-primary);
@@ -194,10 +213,13 @@ header {
 
 .global-search-input:focus,
 .form-control:focus,
-.form-input:focus {
+.form-input:focus,
+textarea:focus {
     border-color: var(--accent-secondary);
     box-shadow: 0 0 0 4px rgba(0, 229, 255, 0.12);
 }
+
+/* Buttons */
 
 .icon-btn {
     position: relative;
@@ -277,6 +299,8 @@ header {
     box-shadow: 0 16px 40px rgba(255, 42, 109, 0.25);
 }
 
+/* Hero */
+
 .hero {
     min-height: 680px;
     display: flex;
@@ -342,6 +366,8 @@ header {
 .hero .btn {
     margin: 0.35rem;
 }
+
+/* Sections */
 
 .section-title {
     text-align: center;
@@ -415,6 +441,8 @@ header {
     font-size: 2rem;
     color: var(--accent-warning);
 }
+
+/* Products */
 
 .products-grid {
     display: grid;
@@ -509,6 +537,27 @@ header {
     animation: spin 16s linear infinite reverse;
 }
 
+.product-photo-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-photo {
+    transform: scale(1.08);
+}
+
 .product-info {
     padding: 1.1rem;
 }
@@ -580,6 +629,8 @@ header {
     gap: 0.65rem;
 }
 
+/* Shop */
+
 .shop-container {
     display: grid;
     grid-template-columns: 290px 1fr;
@@ -642,6 +693,8 @@ header {
     font-weight: 800;
 }
 
+/* Product detail */
+
 .detail-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -659,7 +712,8 @@ header {
     box-shadow: var(--shadow-soft);
 }
 
-.detail-gallery .product-visual {
+.detail-gallery .product-visual,
+.detail-gallery .product-photo-wrap {
     min-height: 560px;
 }
 
@@ -670,6 +724,11 @@ header {
 .detail-gallery .product-shape {
     width: 230px;
     height: 290px;
+}
+
+.detail-gallery .product-photo {
+    object-fit: contain;
+    padding: 2rem;
 }
 
 .product-details-content-panel {
@@ -714,6 +773,8 @@ header {
 .stock-good {
     color: var(--accent-success);
 }
+
+/* Cart */
 
 .title {
     width: min(1180px, calc(100% - 2rem));
@@ -776,6 +837,8 @@ header {
     color: var(--accent-success);
 }
 
+/* Checkout */
+
 .checkout-grid-layout-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -811,6 +874,8 @@ header {
     font-size: 3rem;
     font-weight: 900;
 }
+
+/* Auth */
 
 .auth-container,
 .signin-wrapper {
@@ -974,6 +1039,8 @@ header {
     box-shadow: 0 12px 30px rgba(255, 255, 255, 0.18);
 }
 
+/* Dashboard */
+
 .dashboard-hero {
     background: var(--bg-glass);
     border: 1px solid var(--border-color);
@@ -994,6 +1061,8 @@ header {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-warning));
     font-size: 2.5rem;
 }
+
+/* Footer */
 
 footer {
     margin-top: 6rem;
@@ -1027,6 +1096,8 @@ footer a:hover {
     gap: 0.6rem;
     margin-top: 1rem;
 }
+
+/* Toast / Utilities */
 
 #toast-container {
     position: fixed;
@@ -1098,6 +1169,8 @@ footer a:hover {
     transform: translateY(0);
 }
 
+/* Animations */
+
 @keyframes floatFruit {
     0%, 100% {
         transform: translateY(0) rotate(0);
@@ -1123,6 +1196,8 @@ footer a:hover {
         transform: rotate(360deg);
     }
 }
+
+/* Responsive */
 
 @media (max-width: 1050px) {
     .products-grid {
@@ -1152,6 +1227,15 @@ footer a:hover {
     .nav-wrapper {
         flex-wrap: wrap;
         padding: 0.8rem 0;
+    }
+
+    .brand-text {
+        font-size: 1.1rem;
+    }
+
+    .site-logo {
+        height: 46px;
+        max-width: 70px;
     }
 
     .nav-menu {
