@@ -3,94 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaStitch // Wear The Roar Luxury Streetwear</title>
+    <title>FruitStitch | Premium Fruit-Inspired Streetwear</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand">
-                <svg viewBox="0 0 100 100">
-                    <path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/>
-                </svg>
-                NOVASTITCH
-            </a>
-            <ul class="nav-menu">
-                <li><a href="shop.html" class="nav-link">Shop All</a></li>
-                <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
-                <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
-            </ul>
-            <div class="nav-actions">
-                <div class="search-bar-container">
-                    <input type="text" class="global-search-input" placeholder="Search tech catalog...">
-                </div>
-                <button id="theme-toggle-btn" class="icon-btn">🌗</button>
-                <a href="auth.html" class="icon-btn">👤</a>
-                <a href="dashboard.html" class="icon-btn">★ <span class="badge wish-count-badge">0</span></a>
-                <a href="checkout.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
-            </div>
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="brand">
+            <svg viewBox="0 0 100 100">
+                <path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/>
+            </svg>
+            FRUITSTITCH
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="shop.html" class="nav-link">Shop</a></li>
+            <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
+            <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <input class="global-search-input" type="text" placeholder="Search...">
+            <button id="theme-toggle-btn" class="icon-btn">🌗</button>
+            <a href="signin.html" class="icon-btn">👤</a>
+            <a href="dashboard.html" class="icon-btn">♥ <span class="badge wish-count-badge">0</span></a>
+            <a href="cart.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
         </div>
-    </header>
+    </div>
+</header>
 
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>WEAR THE ROAR</h1>
-            <p>NovaStitch — Premium digital streetwear armor constructed for high-density urban deployment profiles. Inspired by the performance lineage of Nike, Adidas, and Puma.</p>
-            <div style="display:flex; gap:1.5rem;">
-                <a href="shop.html" class="btn btn-accent">Shop Catalog</a>
-                <a href="shop.html?category=sneakers" class="btn">Footwear Systems</a>
-            </div>
+<section class="hero">
+    <div class="container hero-content">
+        <h1>Wear The Fresh</h1>
+        <p>FruitStitch creates bold, colorful streetwear inspired by fruits, movement, and modern city style.</p>
+        <div>
+            <a href="shop.html" class="btn btn-accent">Shop Collection</a>
+            <a href="shop.html?category=sneakers" class="btn">View Sneakers</a>
         </div>
-    </section>
 
-    <section class="container" style="margin-top:6rem;">
-        <h2 class="section-title">DEPLOYMENT LAYERS</h2>
-        <div class="categories-grid">
-            <a href="shop.html?category=hoodies" class="category-card"><h3>Hoodies</h3></a>
-            <a href="shop.html?category=t-shirts" class="category-card"><h3>T-Shirts</h3></a>
-            <a href="shop.html?category=cargo%20pants" class="category-card"><h3>Cargos</h3></a>
-            <a href="shop.html?category=sneakers" class="category-card"><h3>Footwear</h3></a>
+        <div class="stats-grid">
+            <div class="stat-card"><strong data-count="19">0</strong><span>Products</span></div>
+            <div class="stat-card"><strong data-count="4500">0</strong><span>Happy Customers</span></div>
+            <div class="stat-card"><strong>4.8★</strong><span>Average Rating</span></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="container">
-        <h2 class="section-title">CORE SPOTLIGHT INDEX</h2>
-        <div class="products-grid" id="featured-products-grid">
-            </div>
-    </section>
+<section class="container">
+    <h2 class="section-title">Fresh Collections</h2>
+    <div class="categories-grid">
+        <a href="shop.html?category=hoodies" class="category-card"><h3>🍓 Hoodies</h3></a>
+        <a href="shop.html?category=t-shirts" class="category-card"><h3>🍌 T-Shirts</h3></a>
+        <a href="shop.html?category=cargo%20pants" class="category-card"><h3>🥝 Cargos</h3></a>
+        <a href="shop.html?category=sneakers" class="category-card"><h3>🍊 Sneakers</h3></a>
+    </div>
+</section>
 
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <h3 style="font-family:var(--font-display); margin-bottom:1rem; color:#fff;">NOVASTITCH</h3>
-                <p>Premium digital streetwear armor constructed for high-density urban deployment profiles. Grade 9 Web Development Capstone Evaluation Project. Contains simulated trading mechanics only. No real transactions processed.</p>
-            </div>
-            <div>
-                <h4>CATALOG</h4>
-                <p><a href="shop.html">All Garments</a></p>
-                <p><a href="shop.html?gender=men">Men's Collection</a></p>
-                <p><a href="shop.html?gender=women">Women's Collection</a></p>
-                <p><a href="auth.html">Access Portal</a></p>
-            </div>
-            <div>
-                <h4>SERVICES</h4>
-                <p><a href="#">Customer Support</a></p>
-                <p><a href="#">Shipping Information</a></p>
-                <p><a href="#">Size Guide</a></p>
-                <p><a href="#">Order Tracking</a></p>
-            </div>
-            <div>
-                <h4>LEGAL</h4>
-                <p><a href="#">Privacy Policy</a></p>
-                <p><a href="#">Terms of Service</a></p>
-                <p><a href="#">Return Policy</a></p>
-                <p>&copy; 2024 NovaStitch. All Rights Reserved.</p>
-            </div>
+<section class="container">
+    <h2 class="section-title">Featured Picks</h2>
+    <div class="products-grid" id="featured-products-grid"></div>
+</section>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>FRUITSTITCH</h3>
+            <p>Premium fruit-inspired streetwear built for bold students, creators, and trendsetters.</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <input class="form-control" type="email" placeholder="Email for 15% off" required>
+                <button class="btn btn-accent">Join</button>
+            </form>
         </div>
-    </footer>
+        <div>
+            <h4>Shop</h4>
+            <p><a href="shop.html">All Products</a></p>
+            <p><a href="shop.html?gender=men">Men</a></p>
+            <p><a href="shop.html?gender=women">Women</a></p>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <p><a href="faq.html">FAQ</a></p>
+            <p><a href="tracking.html">Track Order</a></p>
+            <p><a href="contact.html">Contact</a></p>
+        </div>
+        <div>
+            <h4>Project</h4>
+            <p>Grade 9 Web Development Business Website.</p>
+            <p>&copy; 2026 FruitStitch.</p>
+        </div>
+    </div>
+</footer>
 
-    <script src="products.js"></script>
-    <script src="app.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

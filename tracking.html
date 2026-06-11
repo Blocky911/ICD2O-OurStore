@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | FruitStitch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="brand">🍓 FRUITSTITCH</a>
+        <a href="shop.html" class="btn">Shop</a>
+    </div>
+</header>
+
+<main class="signin-wrapper">
+    <section class="signin-box">
+        <div class="signin-header">
+            <h1 class="signin-title">Track Order</h1>
+            <p class="signin-subtitle">Enter any order ID, example: FS-12345</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); document.getElementById('track-result').classList.remove('hidden'); showToast('Order found', 'success');">
+            <div class="form-group">
+                <label>Order ID</label>
+                <input class="form-control" placeholder="FS-12345" required>
+            </div>
+            <button class="btn btn-accent" style="width:100%;">Track</button>
+        </form>
+
+        <div id="track-result" class="hidden" style="margin-top:2rem;">
+            <h3 style="color:var(--accent-success);">Order Status</h3>
+            <p>✅ Order Received</p>
+            <p>✅ Processing</p>
+            <p>🚚 Out for Delivery</p>
+        </div>
+    </section>
+</main>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

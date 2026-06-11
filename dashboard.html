@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operations Profile // NovaStitch</title>
+    <title>Dashboard | FruitStitch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand">
-                <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
-                NOVASTITCH
-            </a>
-            <button id="logout-trigger" class="btn" style="padding:0.4rem 1rem;">DE-AUTHORIZE SESSION</button>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="brand">
+            <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
+            FRUITSTITCH
+        </a>
+
+        <div class="nav-actions">
+            <a href="shop.html" class="btn">Shop</a>
+            <button id="logout-trigger" class="btn btn-soft">Logout</button>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main class="container" style="margin-top:4rem;">
-        <div style="background:var(--bg-secondary); border:1px solid var(--border-color); padding:3rem; border-radius:var(--radius-md); display:flex; gap:3rem; align-items:center; margin-bottom:4rem;">
-            <div style="width:100px; height:100px; border-radius:50%; background:var(--accent); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:2.5rem; color:#fff;">⚡</div>
-            <div>
-                <h2 id="db-username" style="font-family:var(--font-display); font-size:2rem; margin-bottom:0.5rem;">OPERATIVE IDENTIFICATION</h2>
-                <div id="db-tier" style="color:var(--accent); font-weight:700; margin-bottom:0.5rem; text-transform:uppercase;">ACCESS LEVEL RANK</div>
-                <div id="db-email" style="color:var(--text-muted)">network.address@novastitch.internal</div>
-            </div>
+<main class="container">
+    <section class="dashboard-hero">
+        <div class="avatar-circle">⚡</div>
+        <div>
+            <h1 id="db-username">User</h1>
+            <p id="db-tier">FruitStitch VIP Member</p>
+            <p id="db-email">email@example.com</p>
         </div>
+    </section>
 
-        <h2 class="section-title">SAVED BLUEPRINT ARCHIVE</h2>
-        <div class="products-grid" id="db-wishlist-grid">
-            </div>
-    </main>
+    <h2 class="section-title">Wishlist</h2>
+    <div class="products-grid" id="db-wishlist-grid"></div>
+</main>
 
-    <script src="products.js"></script>
-    <script src="app.js"></script>
+<script src="products.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

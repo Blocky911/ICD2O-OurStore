@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-<title>Cart | NovaStitch</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | FruitStitch</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
-  <div class="logo">🐅 NovaStitch</div>
-  <a href="index.html">Home</a>
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="brand">
+            <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
+            FRUITSTITCH
+        </a>
+
+        <div class="nav-actions">
+            <a href="shop.html" class="btn">Continue Shopping</a>
+            <a href="checkout.html" class="btn btn-accent">Checkout</a>
+        </div>
+    </div>
 </header>
 
-<h2 class="title">Your Cart</h2>
+<h1 class="title">Your Cart</h1>
 
 <div id="cart"></div>
+<h2 id="total"></h2>
 
-<h3 id="total"></h3>
-
-<div style="padding: 20px; display:flex; gap:12px; justify-content:flex-end;">
-  <button class="btn" onclick="checkout()">Checkout</button>
-  <button class="btn" style="background:#d9534f; color:#fff;" onclick="clearCart()">Clear Cart</button>
+<div class="container" style="display:flex; gap:1rem; justify-content:flex-end; margin-top:2rem;">
+    <button class="btn btn-soft" onclick="clearCart()">Clear Cart</button>
+    <button class="btn btn-accent" onclick="checkout()">Checkout</button>
 </div>
 
 <script src="products.js"></script>

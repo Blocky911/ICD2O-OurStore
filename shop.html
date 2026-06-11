@@ -3,102 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog Directory // NovaStitch Streetwear</title>
+    <title>Shop | FruitStitch</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container nav-wrapper">
-            <a href="index.html" class="brand">
-                <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
-                NOVASTITCH
-            </a>
-            <ul class="nav-menu">
-                <li><a href="shop.html" class="nav-link active">Shop All</a></li>
-                <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
-                <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button id="theme-toggle-btn" class="icon-btn">🌗</button>
-                <a href="auth.html" class="icon-btn">👤</a>
-                <a href="dashboard.html" class="icon-btn">★ <span class="badge wish-count-badge">0</span></a>
-                <a href="checkout.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
-            </div>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="brand">
+            <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
+            FRUITSTITCH
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="shop.html" class="nav-link active">Shop</a></li>
+            <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
+            <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button id="theme-toggle-btn" class="icon-btn">🌗</button>
+            <a href="signin.html" class="icon-btn">👤</a>
+            <a href="dashboard.html" class="icon-btn">♥ <span class="badge wish-count-badge">0</span></a>
+            <a href="cart.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
         </div>
-    </header>
-
-    <div class="container shop-container">
-        <aside class="filters-panel">
-            <div class="filter-group">
-                <h4>SEARCH DIRECTORY</h4>
-                <input type="text" id="shop-page-search-input" class="form-control" placeholder="Filter current page view...">
-            </div>
-            
-            <div class="filter-group">
-                <h4>GARMENT SPECIFICATION</h4>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="hoodies"> Hoodies</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="t-shirts"> T-Shirts</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="cargo pants"> Cargo Pants</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="bags"> Bags</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="hats"> Hats</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="denim jackets"> Denim Jackets</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="socks"> Socks</label>
-                <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="sneakers"> Sneakers</label>
-            </div>
-
-            <div class="filter-group">
-                <h4>GENDER DIVISION</h4>
-                <label class="filter-option"><input type="checkbox" class="filter-gender-chk" value="men"> Men Division</label>
-                <label class="filter-option"><input type="checkbox" class="filter-gender-chk" value="women"> Women Division</label>
-            </div>
-
-            <div class="filter-group">
-                <h4>PRICE CALIBRATION</h4>
-                <select id="price-sort-select" class="form-control">
-                    <option value="default">Default Array Order</option>
-                    <option value="low-high">Price: Scaled Low to High</option>
-                    <option value="high-low">Price: Scaled High to Low</option>
-                </select>
-            </div>
-        </aside>
-
-        <main>
-            <div class="products-grid" id="shop-main-products-grid">
-                </div>
-        </main>
     </div>
+</header>
 
-    <footer>
-        <div class="container footer-grid">
-            <div>
-                <h3 style="font-family:var(--font-display); margin-bottom:1rem; color:#fff;">NOVASTITCH</h3>
-                <p>Premium digital streetwear armor constructed for high-density urban deployment profiles. Grade 9 Web Development Capstone Evaluation Project.</p>
-            </div>
-            <div>
-                <h4>CATALOG</h4>
-                <p><a href="shop.html">All Garments</a></p>
-                <p><a href="shop.html?gender=men">Men's Collection</a></p>
-                <p><a href="shop.html?gender=women">Women's Collection</a></p>
-                <p><a href="auth.html">Access Portal</a></p>
-            </div>
-            <div>
-                <h4>SERVICES</h4>
-                <p><a href="#">Customer Support</a></p>
-                <p><a href="#">Shipping Information</a></p>
-                <p><a href="#">Size Guide</a></p>
-                <p><a href="#">Order Tracking</a></p>
-            </div>
-            <div>
-                <h4>LEGAL</h4>
-                <p><a href="#">Privacy Policy</a></p>
-                <p><a href="#">Terms of Service</a></p>
-                <p><a href="#">Return Policy</a></p>
-                <p>&copy; 2024 NovaStitch. All Rights Reserved.</p>
-            </div>
+<main class="container shop-container">
+    <aside class="filters-panel">
+        <div class="filter-group">
+            <h4>Search</h4>
+            <input type="text" id="shop-page-search-input" class="form-control" placeholder="Search products...">
         </div>
-    </footer>
 
-    <script src="products.js"></script>
-    <script src="app.js"></script>
+        <div class="filter-group">
+            <h4>Category</h4>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="hoodies"> Hoodies</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="t-shirts"> T-Shirts</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="cargo pants"> Cargo Pants</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="sneakers"> Sneakers</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="bags"> Bags</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="hats"> Hats</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="denim jackets"> Denim Jackets</label>
+            <label class="filter-option"><input type="checkbox" class="filter-category-chk" value="socks"> Socks</label>
+        </div>
+
+        <div class="filter-group">
+            <h4>Fit</h4>
+            <label class="filter-option"><input type="checkbox" class="filter-gender-chk" value="men"> Men</label>
+            <label class="filter-option"><input type="checkbox" class="filter-gender-chk" value="women"> Women</label>
+        </div>
+
+        <div class="filter-group">
+            <h4>Sort</h4>
+            <select id="price-sort-select" class="form-control">
+                <option value="default">Featured</option>
+                <option value="low-high">Price Low to High</option>
+                <option value="high-low">Price High to Low</option>
+            </select>
+        </div>
+
+        <button id="clear-filters-btn" class="btn btn-soft" style="width:100%;">Clear Filters</button>
+    </aside>
+
+    <section>
+        <div class="shop-topbar">
+            <h1>Shop Collection</h1>
+            <span id="product-count">0 products found</span>
+        </div>
+
+        <div class="products-grid" id="shop-main-products-grid"></div>
+    </section>
+</main>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

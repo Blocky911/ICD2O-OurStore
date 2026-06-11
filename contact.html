@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | FruitStitch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="index.html" class="brand">🍓 FRUITSTITCH</a>
+        <a href="shop.html" class="btn">Shop</a>
+    </div>
+</header>
+
+<main class="signin-wrapper">
+    <section class="signin-box">
+        <div class="signin-header">
+            <h1 class="signin-title">Contact Us</h1>
+            <p class="signin-subtitle">Questions, feedback, or support.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); showToast('Message sent successfully', 'success'); this.reset();">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control" type="email" required>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" rows="5" required></textarea>
+            </div>
+            <button class="btn btn-accent" style="width:100%;">Send Message</button>
+        </form>
+    </section>
+</main>
+
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
