@@ -17,7 +17,6 @@ function initApp() {
     // Apply UI Theme Design System state
     document.documentElement.setAttribute("data-theme", currentTheme);
     updateBadges();
-    renderUserState();
 
     // Hook Global Layout Components
     setupSearchBar();
@@ -96,24 +95,6 @@ function setupSearchBar() {
     });
 }
 
-function renderUserState() {
-    const authLinks = document.querySelectorAll('a[href="auth.html"]');
-    if (!authLinks || authLinks.length === 0) return;
-
-    authLinks.forEach(link => {
-        if (currentUser) {
-            const shortName = currentUser.firstName || currentUser.name?.split(" ")[0] || "Member";
-            link.innerHTML = `👤 <span class="user-label">${shortName}</span>`;
-            link.href = "dashboard.html";
-            link.title = `Signed in as ${currentUser.name}`;
-        } else {
-            link.innerHTML = `👤`;
-            link.href = "auth.html";
-            link.title = "Sign in";
-        }
-    });
-}
-
 /* ==========================================================================
    E-Commerce Business Operations (Cart / Wishlist Systems)
    ========================================================================== */
@@ -184,13 +165,14 @@ function buildProductCardHTML(p) {
     const isWish = wishlist.includes(p.id) ? "active" : "";
     const badgeMarkup = p.tag ? `<div class="product-badge">${p.tag}</div>` : "";
     const oldPriceMarkup = p.oldPrice ? `<span class="price-old">$${p.oldPrice}</span>` : "";
+    const imageMarkup = p.image ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;">` : generateDynamicGraphic(p.graphicType);
     
     return `
     <div class="product-card" data-id="${p.id}">
         <div class="product-image-wrapper">
             <svg class="brand-stamp" viewBox="0 0 100 100"><path d="M50 15 L80 35 L80 70 L50 90 L20 70 L20 35 Z M50 35 L65 50 L50 65 L35 50 Z" /></svg>
             ${badgeMarkup}
-            ${generateDynamicGraphic(p.graphicType)}
+            ${imageMarkup}
             <div class="product-actions-overlay">
                 <button class="btn btn-accent" style="padding:0.5rem 1rem; font-size:0.75rem;" onclick="addToCart('${p.id}')">Quick Add</button>
                 <a href="product.html?id=${p.id}" class="btn" style="padding:0.5rem 1rem; font-size:0.75rem;">View</a>
@@ -353,127 +335,32 @@ function initProductDetailPage() {
 
 // AUTHENTICATION SYSTEM CONTROLLER (MOCK LOGIN)
 function initAuthPage() {
-    if (currentUser) {
-        window.location.href = "dashboard.html";
-        return;
-    }
+    const tabs = document.querySelectorAll(".auth-tab");
+    tabs.forEach(t => {
+        t.addEventListener("click", () => {
+            tabs.forEach(tab => tab.classList.remove("active"));
+            t.classList.add("active");
+            showToast(`Switched window interface focus state.`, "info");
+        });
+    });
 
-    const signInTab = document.getElementById("auth-signin-tab");
-    const registerTab = document.getElementById("auth-register-tab");
-    const authForm = document.getElementById("auth-form");
-    const formTitle = document.getElementById("auth-form-title");
-    const submitBtn = document.getElementById("auth-submit-btn");
-    const authMessage = document.getElementById("auth-message");
-    const nameRow = document.getElementById("auth-name-row");
-    const confirmRow = document.getElementById("auth-confirm-row");
-    const googleButton = document.getElementById("google-oauth-trigger");
-
-    if (!authForm || !signInTab || !registerTab) return;
-
-    const users = JSON.parse(localStorage.getItem("ns_users")) || [];
-
-    const setMode = (mode) => {
-        authForm.dataset.mode = mode;
-        if (mode === "register") {
-            signInTab.classList.remove("active");
-            registerTab.classList.add("active");
-            formTitle.textContent = "Create Account";
-            submitBtn.textContent = "Create Account";
-            nameRow.style.display = "block";
-            confirmRow.style.display = "block";
-            authMessage.textContent = "";
-        } else {
-            signInTab.classList.add("active");
-            registerTab.classList.remove("active");
-            formTitle.textContent = "Sign In";
-            submitBtn.textContent = "Request Clearance Token";
-            nameRow.style.display = "none";
-            confirmRow.style.display = "none";
-            authMessage.textContent = "";
-        }
-    };
-
-    const showAuthMessage = (text, isError = false) => {
-        authMessage.textContent = text;
-        authMessage.style.color = isError ? "#ff6b6b" : "var(--accent)";
-    };
-
-    const getUserByEmail = (email) => {
-        return users.find(user => user.email.toLowerCase() === email.toLowerCase());
-    };
-
-    const saveUsers = () => {
-        localStorage.setItem("ns_users", JSON.stringify(users));
-    };
-
-    const loginUser = (user) => {
-        currentUser = user;
-        localStorage.setItem("ns_user", JSON.stringify(user));
-        updateBadges();
-        showToast(`Welcome back, ${user.name}!`, "success");
-        setTimeout(() => window.location.href = "dashboard.html", 1000);
-    };
-
-    const registerUser = (name, email, password) => {
-        const [first, ...rest] = name.trim().split(" ");
-        const last = rest.join(" ");
-        const user = {
-            name: name.trim(),
-            firstName: first || "User",
-            lastName: last || "",
-            email: email.toLowerCase(),
-            password,
-            level: "Verified Member"
-        };
-        users.push(user);
-        saveUsers();
-        loginUser(user);
-    };
-
-    signInTab.addEventListener("click", () => setMode("login"));
-    registerTab.addEventListener("click", () => setMode("register"));
-
-    authForm.addEventListener("submit", (e) => {
+    // Standard Submit Form Logic Mock handler
+    document.getElementById("login-form")?.addEventListener("submit", (e) => {
         e.preventDefault();
-        const email = document.getElementById("auth-email").value.trim().toLowerCase();
-        const password = document.getElementById("auth-pass").value;
-        if (!email || !password) {
-            return showAuthMessage("Enter both email and password.", true);
-        }
-        if (authForm.dataset.mode === "register") {
-            const displayName = document.getElementById("auth-name").value.trim();
-            const confirmPassword = document.getElementById("auth-confirm").value;
-            if (!displayName) {
-                return showAuthMessage("Enter your full name.", true);
-            }
-            if (password.length < 6) {
-                return showAuthMessage("Use at least 6 characters for your pass-string.", true);
-            }
-            if (password !== confirmPassword) {
-                return showAuthMessage("Pass-string confirmation does not match.", true);
-            }
-            if (getUserByEmail(email)) {
-                return showAuthMessage("An account already exists with that email.", true);
-            }
-            registerUser(displayName, email, password);
-        } else {
-            const user = getUserByEmail(email);
-            if (!user || user.password !== password) {
-                return showAuthMessage("Invalid email or pass-string.", true);
-            }
-            loginUser(user);
-        }
-    });
-
-    googleButton?.addEventListener("click", () => {
-        const mockUser = { name: "Google User", email: "google.user@novastitch.com", level: "Google Auth" };
-        currentUser = mockUser;
+        const email = document.getElementById("auth-email").value;
+        const mockUser = { name: email.split("@")[0], email: email, level: "Verified Member" };
         localStorage.setItem("ns_user", JSON.stringify(mockUser));
-        showToast("Signed in with Google!", "success");
-        setTimeout(() => window.location.href = "dashboard.html", 1000);
+        showToast("Access Token Generated Successfully! Redirecting...");
+        setTimeout(() => window.location.href = "dashboard.html", 1500);
     });
 
-    setMode("login");
+    // GOOGLE AUTHENTICATION OVERRIDE API SIMULATOR
+    document.getElementById("google-oauth-trigger")?.addEventListener("click", () => {
+        const mockUser = { name: "Streetwear Icon", email: "icon@gmail.com", level: "Elite Tier Boardmember" };
+        localStorage.setItem("ns_user", JSON.stringify(mockUser));
+        showToast("Connected to Google OAuth secure networks!", "success");
+        setTimeout(() => window.location.href = "dashboard.html", 1200);
+    });
 }
 
 // USER SYSTEM PROFILE DASHBOARD
@@ -502,9 +389,7 @@ function initDashboardPage() {
 
     // Setup Logout Trigger
     document.getElementById("logout-trigger")?.addEventListener("click", () => {
-        currentUser = null;
         localStorage.removeItem("ns_user");
-        renderUserState();
         showToast("De-authorized user session. Wiping credentials caching.", "info");
         setTimeout(() => window.location.href = "index.html", 1000);
     });

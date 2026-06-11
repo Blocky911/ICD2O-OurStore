@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>NovaStitch // Wear The Roar Luxury Streetwear</title>
     <link rel="stylesheet" href="style.css">
-=======
-    <title>STUDIO | Designer Wear</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
->>>>>>> be5e1b6399b64ef21e8bea0fa2958a5324e537bc
 </head>
 <body>
 
@@ -27,7 +21,6 @@
                 <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
                 <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
             </ul>
-<<<<<<< HEAD
             <div class="nav-actions">
                 <div class="search-bar-container">
                     <input type="text" class="global-search-input" placeholder="Search tech catalog...">
@@ -37,20 +30,13 @@
                 <a href="dashboard.html" class="icon-btn">★ <span class="badge wish-count-badge">0</span></a>
                 <a href="checkout.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
             </div>
-=======
-        </nav>
-        <div class="nav-utilities">
-            <button class="theme-toggle-btn" id="theme-toggle">🌓 Mode</button>
-            <a href="signin.html" class="signin-link" id="user-nav-link">Sign In</a>
-            <div class="cart-icon" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</div>
->>>>>>> be5e1b6399b64ef21e8bea0fa2958a5324e537bc
         </div>
     </header>
 
     <section class="hero">
         <div class="container hero-content">
             <h1>WEAR THE ROAR</h1>
-            <p>NovaStitch — Premium digital streetwear armor constructed for high-density urban deployment profiles.</p>
+            <p>NovaStitch — Premium digital streetwear armor constructed for high-density urban deployment profiles. Inspired by the performance lineage of Nike, Adidas, and Puma.</p>
             <div style="display:flex; gap:1.5rem;">
                 <a href="shop.html" class="btn btn-accent">Shop Catalog</a>
                 <a href="shop.html?category=sneakers" class="btn">Footwear Systems</a>
@@ -74,35 +60,32 @@
             </div>
     </section>
 
-    <div class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <button class="close-cart-btn" onclick="toggleCart()">&times;</button>
-        </div>
-        <div class="cart-items" id="cart-items">
-            <p class="empty-msg">Your cart is empty.</p>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">Total: $<span id="cart-total-val">0.00</span></div>
-            <button class="checkout-btn" onclick="alert('Proceeding to checkout simulation!')">Checkout</button>
-        </div>
-    </div>
-    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
-
     <footer>
         <div class="container footer-grid">
             <div>
                 <h3 style="font-family:var(--font-display); margin-bottom:1rem; color:#fff;">NOVASTITCH</h3>
-                <p>Grade 9 Web Development Capstone Evaluation Project. Contains simulated trading mechanics only. No real transactions processed.</p>
+                <p>Premium digital streetwear armor constructed for high-density urban deployment profiles. Grade 9 Web Development Capstone Evaluation Project. Contains simulated trading mechanics only. No real transactions processed.</p>
             </div>
             <div>
-                <h4>INDEX</h4>
+                <h4>CATALOG</h4>
                 <p><a href="shop.html">All Garments</a></p>
+                <p><a href="shop.html?gender=men">Men's Collection</a></p>
+                <p><a href="shop.html?gender=women">Women's Collection</a></p>
                 <p><a href="auth.html">Access Portal</a></p>
             </div>
             <div>
-                <h4>PROMO DISPATCH</h4>
-                <p>Enter string code <strong style="color:var(--accent)">ROAR20</strong> inside checkout modules for 20% price deduction calibration.</p>
+                <h4>SERVICES</h4>
+                <p><a href="#">Customer Support</a></p>
+                <p><a href="#">Shipping Information</a></p>
+                <p><a href="#">Size Guide</a></p>
+                <p><a href="#">Order Tracking</a></p>
+            </div>
+            <div>
+                <h4>LEGAL</h4>
+                <p><a href="#">Privacy Policy</a></p>
+                <p><a href="#">Terms of Service</a></p>
+                <p><a href="#">Return Policy</a></p>
+                <p>&copy; 2024 NovaStitch. All Rights Reserved.</p>
             </div>
         </div>
     </footer>

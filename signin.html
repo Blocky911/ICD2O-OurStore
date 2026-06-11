@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Authorization Portal // NovaStitch</title>
+    <title>NOVASTITCH | Sign In</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,17 @@
                 <svg viewBox="0 0 100 100"><path d="M30 20 L50 5 L70 20 L85 45 L75 85 L50 95 L25 85 L15 45 Z M50 25 L65 45 L55 50 L50 40 L45 50 L35 45 Z M50 60 L60 70 L50 75 L40 70 Z"/></svg>
                 NOVASTITCH
             </a>
+            <ul class="nav-menu">
+                <li><a href="shop.html" class="nav-link">Shop All</a></li>
+                <li><a href="shop.html?gender=men" class="nav-link">Men</a></li>
+                <li><a href="shop.html?gender=women" class="nav-link">Women</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle-btn" class="icon-btn">🌗</button>
+                <a href="auth.html" class="icon-btn">👤</a>
+                <a href="dashboard.html" class="icon-btn">★ <span class="badge wish-count-badge">0</span></a>
+                <a href="checkout.html" class="icon-btn">🛒 <span class="badge cart-count-badge">0</span></a>
+            </div>
         </div>
     </header>
 
@@ -44,6 +55,30 @@
             Sign in with Google Secure Sync
         </button>
     </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3 style="font-family:var(--font-display); margin-bottom:1rem; color:#fff;">NOVASTITCH</h3>
+                <p>Grade 9 Web Development Capstone Evaluation Project. Contains simulated trading mechanics only. No real transactions processed.</p>
+            </div>
+            <div>
+                <h4>INDEX</h4>
+                <p><a href="shop.html">All Garments</a></p>
+                <p><a href="auth.html">Access Portal</a></p>
+            </div>
+            <div>
+                <h4>COMPANY SERVICES</h4>
+                <p><a href="#">Customer Support</a></p>
+                <p><a href="#">Shipping Info</a></p>
+            </div>
+            <div>
+                <h4>LEGAL</h4>
+                <p>&copy; 2024 NovaStitch. All Rights Reserved.</p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
 
     <script src="products.js"></script>
     <script src="app.js"></script>
